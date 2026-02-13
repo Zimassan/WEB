@@ -8,7 +8,6 @@
 </head>
 <body>
     <header>
-        <img src="media/images/logo-efrei.png" alt="Logo EFREI" width="200">
         <nav>
             <a href="./Index.html">Accueil</a>
             <a href="./Cours.html">Cours</a>
