@@ -1,26 +1,48 @@
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Département Informatique EFREI</title>
-    <link rel="stylesheet" href="../css/styles.css">
+    <title>Équipe enseignante - EFREI</title>
+    <link rel="stylesheet" href="css/style.css">
 </head>
+
 <body>
+
     <header>
+        <h1>EQUIPE</h1>
         <nav>
             <a href="./Index.html">Accueil</a>
             <a href="./Cours.html">Cours</a>
             <a href="./Equipe.html">Equipe</a>
-            <a href="./Contact.html">A propos</a>
+            <a href="./Contact.html">Contact</a>
         </nav>
     </header>
 
     <main>
+
         <section>
-            <h2>Présentation</h2>
-            <p>Contenu ici...</p>
+            <h2>Notre Équipe Enseignante</h2>
         </section>
+
+        <section>
+            <article>
+                <h3>Mohamed HAMIDI</h3>
+                <p>Responsable du département - Spécialiste en cybersécurité.</p>
+            </article>
+
+            <article>
+                <h3>Marie DUPONT</h3>
+                <p>Enseignante en Développement Web et UX Design.</p>
+            </article>
+
+            <article>
+                <h3>Jean MARTIN</h3>
+                <p>Expert en Intelligence Artificielle et Data Science.</p>
+            </article>
+        </section>
+
     </main>
 
     <footer>
@@ -30,4 +52,5 @@
     <script src="js/script.js"></script>
 
 </body>
+
 </html>
