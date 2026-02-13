@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Département Informatique EFREI</title>
+    <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body>
+    <header>
+        <img src="media/images/logo-efrei.png" alt="Logo EFREI" width="200">
+        <nav>
+            <a href="./Index.html">Accueil</a>
+            <a href="./Cours.html">Cours</a>
+            <a href="./Equipe.html">Equipe</a>
+            <a href="./Contact.html">A propos</a>
+        </nav>
+    </header>
+
+    <main>
+        <section>
+            <h2>Présentation</h2>
+            <p>Contenu ici...</p>
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2026 EFREI - Projet XTI205</p>
+    </footer>
+
+    <script src="js/script.js"></script>
+
+</body>
+</html>
