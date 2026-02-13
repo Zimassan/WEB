@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - EFREI</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <header>
+        <h1>Contact</h1>
+        <nav>
+            <a href="./Index.html">Accueil</a>
+            <a href="./Cours.html">Cours</a>
+            <a href="./Equipe.html">Equipe</a>
+            <a href="./Contact.html">Contact</a>
+        </nav>
+    </header>
+
+    <main>
+
+        <section>
+            <h2>Contactez-nous</h2>
+
+            <form action="#" method="post">
+
+                <label for="nom">Nom :</label><br>
+                <input type="text" id="nom" name="nom" required><br><br>
+
+                <label for="email">Email :</label><br>
+                <input type="email" id="email" name="email" required><br><br>
+
+                <label for="message">Message :</label><br>
+                <textarea id="message" name="message" rows="5" required></textarea><br><br>
+
+                <button type="submit">Envoyer</button>
+
+            </form>
+        </section>
+
+        <section>
+            <h2>À propos du projet</h2>
+            <p>
+                Ce site a été réalisé dans le cadre du projet XTI205-CYB.
+            </p>
+            <p>
+                Membres du groupe : Ismail Boulhamane, Raphael Cojocaru, Kyra GALLARD
+            </p>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>© 2026 EFREI - Projet XTI205</p>
+    </footer>
+
+    <script src="js/script.js"></script>
+
+</body>
+
+</html>
