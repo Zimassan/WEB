@@ -1,27 +1,73 @@
-<!DOCTYPE html>
+</html><!DOCTYPE html>
 <html lang="fr">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Département Informatique EFREI</title>
-    <link rel="stylesheet" href="../css/styles.css">
+    <title>Cours et Formations - EFREI</title>
+    <link rel="stylesheet" href="css/style.css">
 </head>
+
 <body>
+
     <header>
-        <img src="media/images/logo-efrei.png" alt="Logo EFREI" width="200">
+        <h1>COURS</h1>
         <nav>
             <a href="./Index.html">Accueil</a>
             <a href="./Cours.html">Cours</a>
             <a href="./Equipe.html">Equipe</a>
-            <a href="./Contact.html">A propos</a>
+            <a href="./Contact.html">Contact</a>
         </nav>
     </header>
 
     <main>
+
         <section>
-            <h2>Présentation</h2>
-            <p>Contenu ici...</p>
+            <h2>Nos Formations</h2>
+            <p>Le département Informatique propose plusieurs parcours spécialisés.</p>
         </section>
+
+        <section>
+            <h2>Programme des cours</h2>
+
+            <table border="1">
+                <thead>
+                    <tr>
+                        <th>Année</th>
+                        <th>Matière</th>
+                        <th>Volume horaire</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1ère année</td>
+                        <td>Algorithmique</td>
+                        <td>60h</td>
+                    </tr>
+                    <tr>
+                        <td>2ème année</td>
+                        <td>Développement Web</td>
+                        <td>80h</td>
+                    </tr>
+                    <tr>
+                        <td>3ème année</td>
+                        <td>Cybersécurité</td>
+                        <td>70h</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <section>
+            <h2>Spécialisations</h2>
+            <ul>
+                <li>Cybersécurité</li>
+                <li>Data Science</li>
+                <li>Cloud Computing</li>
+                <li>Intelligence Artificielle</li>
+            </ul>
+        </section>
+
     </main>
 
     <footer>
@@ -31,4 +77,5 @@
     <script src="js/script.js"></script>
 
 </body>
+
 </html>
