@@ -8,12 +8,12 @@
 </head>
 <body>
     <header>
-        <img src="media/images/logo-efrei.png" alt="Logo EFREI" width="200">
+        <img src="../IMG/Logo_Efrei.png" alt="Logo EFREI" width="200">
         <nav>
             <a href="./Index.html">Accueil</a>
             <a href="./Cours.html">Cours</a>
             <a href="./Equipe.html">Equipe</a>
-            <a href="./Contact.html">A propos</a>
+            <a href="./Contact.html">Contact</a>
         </nav>
     </header>
 
@@ -29,8 +29,7 @@
         <section>
             <h2>Notre Mission</h2>
             <p>
-                Offrir une formation d’excellence alliant théorie et pratique,
-                afin de préparer les étudiants aux défis technologiques actuels.
+                Offrir une formation d’excellence alliant théorie et pratique, afin de préparer les étudiants aux défis technologiques actuels.
             </p>
         </section>
 
