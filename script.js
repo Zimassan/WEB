@@ -61,3 +61,9 @@ document.addEventListener('DOMContentLoaded', function() {
         });                                           // mais que pour les titres h2 h3 sinon nope
     });
 });
+
+
+
+// ça marche pas je modifie
+
+//svp les gens commenter votre code lààààà rohhhh
