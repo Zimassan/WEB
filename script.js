@@ -49,17 +49,19 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     
-    const titles = document.querySelectorAll('main h2, main h3');
-    titles.forEach(title => {
-        const originalColor = window.getComputedStyle(title).color;
-        title.style.cursor = 'pointer';
-        title.addEventListener('mouseover', () => {
-            title.style.color = '#ff6600';
+   const secretText = document.querySelector('.secret-text');
+    if (secretText) {
+        secretText.setAttribute('style', 'color: white !important; cursor: pointer !important; user-select: none !important;');
+        secretText.addEventListener('mouseover', () => {
+            secretText.setAttribute('style', 'color: #ff0000 !important; cursor: pointer !important; user-select: none !important; font-weight: bold !important;');
         });
-        title.addEventListener('mouseout', () => {
-            title.style.color = originalColor;    //en gros il va juste changer la couleur du titre quand tu passes la souris dessus pour que ça soit un peu plus interactif et que ça fasse pas trop statique, c'est pas grand chose mais ça ajoute un petit truc en plus je trouve
-        });                                           // mais que pour les titres h2 h3 sinon nope
-    });
+        secretText.addEventListener('mouseout', () => {
+            secretText.setAttribute('style', 'color: white !important; cursor: pointer !important; user-select: none !important; font-weight: normal !important;');
+        });
+        secretText.addEventListener('click', () => {
+            alert('FAHHHHHHH!!!! 🎉🎉🎉 Vous avez trouvé le secret!!! 😱 chockar de zinzin FAHHHHHHHHHHHHHH');
+        });
+    } //ça marchait pas donc j'ai forcé avec !important la mise en style
 });
 
 
