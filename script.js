@@ -61,3 +61,25 @@ document.addEventListener('DOMContentLoaded', function() {
         });                                           // mais que pour les titres h2 h3 sinon nope
     });
 });
+
+
+    const secretText = document.querySelector('.secret-text');
+    if (secretText) {
+        secretText.style.color = 'white';  //ça le met en blanc pour le cacher
+        secretText.style.cursor = 'pointer'; 
+        secretText.style.userSelect = 'none';
+        secretText.addEventListener('mouseover', () => {
+            secretText.style.color = '#ff0000';  //quand la souris passe dessus ça l'affiche en rouge et gras
+            secretText.style.fontWeight = 'bold';
+        });
+        secretText.addEventListener('mouseout', () => {
+            secretText.style.color = 'white';        //retourne normal quand plus de souris
+            secretText.style.fontWeight = 'normal';
+        });
+        secretText.addEventListener('click', () => {
+            alert('FAHHHHHHH!!!! 🎉🎉🎉 Vous avez trouvé le secret!!! 😱 chockar de zinzin FAHHHHHHHHHHHHHH'); //el famoso poppup
+        });
+    }
+});
+
+//svp les gens commenter votre code lààààà rohhhh
