@@ -220,23 +220,26 @@ input:focus, textarea:focus {
     border-color: var(--accent-color); /* Remplace par le bleu EFREI */
 }
 
-button {
+button, .bouton-lien {
     background-color: var(--accent-color);
     color: #fff;
     border: none;
     padding: 15px 30px;
     font-size: 1.2rem;
     border-radius: 5px;
-    cursor: pointer; /* Change la souris en main */
+    cursor: pointer;
     transition: background-color var(--transition-speed), transform 0.1s;
+    text-decoration: none; /* Enlève le soulignement du lien */
+    display: inline-block; /* Permet d'appliquer le padding correctement sur un lien */
+    text-align: center;
 }
 
-button:hover {
-    background-color: #0056b3; /* Bleu plus foncé au survol */
+button:hover, .bouton-lien:hover {
+    background-color: #0056b3;
 }
 
-button:active {
-    transform: scale(0.98); /* Petit effet de clic d'enfoncement */
+button:active, .bouton-lien:active {
+    transform: scale(0.98);
 }
 
 /* Animations */
