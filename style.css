@@ -1,1 +1,263 @@
+#bg-carousel {
+    position: fixed; /* Reste fixe même si on défile vers le bas */
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: -2; /* permet d'etre derrière le contenu */
 
+    /* Centrer et adapter l'image */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    /* Animation entre les images */
+    transition: background-image 100s ease-in-out;
+}
+
+:root {
+    --bg-color: #0a0a0a; /* Noir */
+    --text-color: #f0f0f0; /* Blanc cassé pour ne pas fatiguer les yeux */
+    --accent-color: #007bff; /* Bleu EFREI */
+    --card-bg: #1a1a1a; /* Gris très foncé pour faire ressortir les éléments */
+    --transition-speed: 0.3s; /* Vitesse pour les animations */
+}
+
+/* Suppressions des marges par défaut du navigateur */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* Assure que les bordures ne cassent pas la taille des boîtes */
+    font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; /* choix de police */
+}
+
+/* On applique la couleur de fond sombre et le texte clair à toute la page */
+body {
+    background-color: transparent;
+    color: var(--text-color);
+    line-height: 1.6; /* Aère le texte pour une meilleure lisibilité */
+}
+
+/* En-tête */
+
+header {
+    display: flex; /* Aligne le logo et le menu sur la même ligne */
+    justify-content: space-between; /* Écarte le logo à gauche, le menu à droite */
+    align-items: center; /* Centre verticalement */
+    padding: 20px 50px;
+    background-color: rgba(10, 10, 10, 0.9); /* Fond noir transparent */
+    position: sticky; /* Le menu bouge pas meme quand on descend */
+    top: 0;
+    z-index: 1000; /* Assure que le menu passe par-dessus le reste du site */
+    border-bottom: 1px solid #333;
+}
+
+nav a {
+    color: var(--text-color);
+    text-decoration: none; /* Enlève le soulignement moche par défaut des liens */
+    margin-left: 30px;
+    font-weight: 500;
+    text-transform: uppercase; /* Met le texte en majuscules */
+    letter-spacing: 2px; /* Espace les lettres */
+    transition: color var(--transition-speed); /* Prépare l'animation de couleur */
+    position: relative; /* Nécessaire pour l'animation du trait en dessous */
+}
+
+/* Animation au survol des liens du menu (le petit trait qui apparaît) */
+nav a::after {
+    content: ''; /* Crée un élément invisible */
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 0%; /* Le trait commence avec une largeur de 0 */
+    height: 2px;
+    background-color: var(--accent-color);
+    transition: width var(--transition-speed) ease-in-out; /* L'animation d'élargissement */
+}
+
+nav a:hover::after {
+    width: 100%; /* Au survol, le trait prend toute la largeur */
+}
+
+nav a:hover {
+    color: var(--accent-color); /* Le texte devient bleu au survol */
+}
+
+/* Structure */
+
+main {
+    padding: 40px 50px;
+    max-width: 1200px;
+    margin: 40px auto; /* Centre le contenu et l'écarte un peu du haut */
+
+    background-color: rgba(0, 0, 0, 0.7); /* Fond noir à 70% d'opacité */
+    border-radius: 15px; /* Arrondit les bords de la zone de contenu */
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5); /* ombre autour de la boîte */
+}
+
+section {
+    margin: 80px 0; /* Espace entre chaque section */
+    animation: fadeIn 1s ease-in-out; /* Applique l'animation d'apparition */
+}
+
+h1, h2, h3, p, label {
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.9);
+}
+
+h2 {
+    font-size: 2.5rem;
+    border-bottom: 2px solid var(--accent-color); /* Ligne bleue sous les titres */
+    display: inline-block;
+    padding-bottom: 10px;
+}
+
+/* Section Héro (L'introduction de l'accueil) */
+#hero {
+    height: 70vh; /* Prend 70% de la hauteur de l'écran */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+}
+
+#hero h2 {
+    font-size: 4rem; /* gros titre */
+    border: none;
+    letter-spacing: 5px;
+}
+
+#hero p {
+    font-size: 1.5rem;
+    color: #aaa; /* Gris clair */
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* Tableaux */
+
+/* Pour la section "Quelques chiffres" et autres listes */
+section div, section > article {
+    display: grid; /* Utilise la grille CSS */
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* S'adapte tout seul à la taille de l'écran */
+    gap: 30px; /* Espace entre les boîtes */
+    margin-top: 40px;
+}
+
+article {
+    background-color: var(--card-bg);
+    padding: 30px;
+    border-radius: 10px; /* Bords légèrement arrondis */
+    text-align: center;
+    border: 1px solid #333;
+    transition: transform var(--transition-speed), box-shadow var(--transition-speed); /* Prépare l'effet de survol */
+}
+
+/* Effet de lévitation au survol des "cartes" */
+article:hover {
+    transform: translateY(-10px); /* Fait monter la carte de 10 pixels */
+    box-shadow: 0 10px 20px rgba(0, 123, 255, 0.2); /* Ajoute une ombre bleutée */
+    border-color: var(--accent-color);
+}
+
+article h3 {
+    font-size: 2rem;
+    color: var(--accent-color);
+    margin-bottom: 10px;
+}
+
+/* Formulaires */
+
+/* Design du tableau des cours */
+table {
+    width: 100%;
+    border-collapse: collapse; /* Enlève les doubles bordures */
+    margin-top: 30px;
+    background-color: var(--card-bg);
+}
+
+th, td {
+    padding: 15px;
+    text-align: left;
+    border-bottom: 1px solid #333;
+}
+
+th {
+    background-color: #111;
+    color: var(--accent-color);
+    text-transform: uppercase;
+}
+
+/* Design du formulaire de contact */
+form {
+    display: flex;
+    flex-direction: column;
+    max-width: 600px;
+    background-color: var(--card-bg);
+    padding: 40px;
+    border-radius: 10px;
+}
+
+label {
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #ccc;
+}
+
+input, textarea {
+    background-color: #111;
+    border: 1px solid #444;
+    color: var(--text-color);
+    padding: 15px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    font-size: 1rem;
+    transition: border-color var(--transition-speed);
+}
+
+/* Quand on clique dans un champ de texte */
+input:focus, textarea:focus {
+    outline: none; /* Enlève la bordure bleue par défaut du navigateur */
+    border-color: var(--accent-color); /* Remplace par le bleu EFREI */
+}
+
+button {
+    background-color: var(--accent-color);
+    color: #fff;
+    border: none;
+    padding: 15px 30px;
+    font-size: 1.2rem;
+    border-radius: 5px;
+    cursor: pointer; /* Change la souris en main */
+    transition: background-color var(--transition-speed), transform 0.1s;
+}
+
+button:hover {
+    background-color: #0056b3; /* Bleu plus foncé au survol */
+}
+
+button:active {
+    transform: scale(0.98); /* Petit effet de clic d'enfoncement */
+}
+
+/* Animations */
+
+footer {
+    text-align: center;
+    padding: 30px;
+    background-color: #050505;
+    border-top: 1px solid #333;
+    margin-top: 50px;
+    color: #777;
+}
+
+/* L'animation d'apparition douce des sections quand on charge la page */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px); /* Commence un peu plus bas et transparent */
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0); /* Finit à sa position normale, totalement visible */
+    }
+}
