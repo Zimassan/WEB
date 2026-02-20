@@ -1,4 +1,39 @@
 
+// On attend que la page soit totalement chargée
+document.addEventListener('DOMContentLoaded', () => {
+
+    // On cible notre div
+    const bgCarousel = document.getElementById('bg-carousel');
+
+    // On vérifie qu'on est bien sur la page d'accueil (là où il y a le carousel)
+    if (bgCarousel) {
+        // Le tableau avec les noms de vos 5 images
+        const images = [
+            './IMG/img_efrei1.jpg',
+            './IMG/img_efrei2.jpg',
+            './IMG/img_efrei3.jpg',
+            './IMG/img_efrei4.jpg',
+            './IMG/img_efrei5.jpg'
+        ];
+
+        let currentIndex = 0;
+
+        function changeBackgroundImage() {
+            // On applique l'image actuelle en fond
+            bgCarousel.style.backgroundImage = `url('${images[currentIndex]}')`;
+
+            // On calcule l'index de la prochaine image (revient à 0 à la fin)
+            currentIndex = (currentIndex + 1) % images.length;
+        }
+
+        // On lance l'affichage de la première image tout de suite
+        changeBackgroundImage();
+
+        // On change l'image toutes les 5000 millisecondes (5 secondes)
+        setInterval(changeBackgroundImage, 5000);
+    }
+});
+
 //en gros c'est le js pour les interactions de base il manque des images et tout mais pour l'animation ça va être galère kyra j'espère ta pas mis full css sinon je pleure
 
 document.addEventListener('DOMContentLoaded', function() {
@@ -47,25 +82,5 @@ document.addEventListener('DOMContentLoaded', function() {
             form.reset();
         });
     }
-
-    
-   const secretText = document.querySelector('.secret-text');
-    if (secretText) {
-        secretText.setAttribute('style', 'color: white !important; cursor: pointer !important; user-select: none !important;');
-        secretText.addEventListener('mouseover', () => {
-            secretText.setAttribute('style', 'color: #ff0000 !important; cursor: pointer !important; user-select: none !important; font-weight: bold !important;');
-        });
-        secretText.addEventListener('mouseout', () => {
-            secretText.setAttribute('style', 'color: white !important; cursor: pointer !important; user-select: none !important; font-weight: normal !important;');
-        });
-        secretText.addEventListener('click', () => {
-            alert('FAHHHHHHH!!!! 🎉🎉🎉 Vous avez trouvé le secret!!! 😱 chockar de zinzin FAHHHHHHHHHHHHHH');
-        });
-    } //ça marchait pas donc j'ai forcé avec !important la mise en style
-});
-
-
-
-// ça marche pas je modifie
 
 //svp les gens commenter votre code lààààà rohhhh
