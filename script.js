@@ -37,7 +37,7 @@ document.addEventListener('DOMContentLoaded', () => {
 //en gros c'est le js pour les interactions de base il manque des images et tout mais pour l'animation ça va être galère kyra j'espère ta pas mis full css sinon je pleure
 
 document.addEventListener('DOMContentLoaded', function() {
-    
+
     const navLinks = document.querySelectorAll('nav a');
     navLinks.forEach(link => {
         const originalColor = link.style.color || window.getComputedStyle(link).color;
@@ -48,12 +48,12 @@ document.addEventListener('DOMContentLoaded', function() {
             link.style.color = originalColor;       //ps : a priori ça remet la couleur bleu d'origine avant que tu cliques sur le lien
         });                                         //mais normalement ça devait mettre en rouge
         link.addEventListener('click', (e) => {
-          
+
             alert('Vous allez sur la page "' + link.textContent + '"'); //dit sur quel page tu vas aller 
         });
     });
 
-    
+
     const logo = document.querySelector('header img');
     if (logo) {
         logo.style.cursor = 'pointer';
@@ -62,17 +62,17 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 
-   
+
     const headerTitle = document.querySelector('header h1');
     const welcomeText = headerTitle ? headerTitle.textContent : document.title;
     if (welcomeText) {
-        
+
         setTimeout(() => {
             alert('Bienvenue sur la page "' + welcomeText + '"');  //ça fait un popup de bienvenue après 300ms c'est rapide mais pas isntant 
         }, 300);
     }
 
-    
+
     const form = document.querySelector('form');
     if (form) {
         form.addEventListener('submit', (e) => {
@@ -82,5 +82,11 @@ document.addEventListener('DOMContentLoaded', function() {
             form.reset();
         });
     }
+
+});
+
+
+
+// ça marche pas je modifie
 
 //svp les gens commenter votre code lààààà rohhhh
